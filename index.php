@@ -283,15 +283,15 @@ if (isset($_GET['i'])) {
 
     <div class="tab-content">
         <div class="tab-pane active" id="hourlyGraph">
-            <div id="hourlyNetworkTrafficGraph" style="height: 300px;"></div>
+            
         </div>
 
         <div class="tab-pane" id="dailyGraph">
-            <div id="dailyNetworkTrafficGraph" style="height: 300px;"></div>
+            
         </div>
 
         <div class="tab-pane" id="monthlyGraph">
-            <div id="monthlyNetworkTrafficGraph" style="height: 300px;"></div>
+            
         </div>
     </div>
 </div>
@@ -306,12 +306,15 @@ if (isset($_GET['i'])) {
 
     <div class="tab-content">
         <div class="tab-pane active" id="hourly">
+            <div id="hourlyNetworkTrafficGraph" style="height: 300px;"></div>
             <?php printTableStats($vnstat_bin_dir, "hourly", $thisInterface, 'Hour') ?>
         </div>
         <div class="tab-pane" id="daily">
+            <div id="dailyNetworkTrafficGraph" style="height: 300px;"></div>
             <?php printTableStats($vnstat_bin_dir, "daily", $thisInterface, 'Day') ?>
         </div>
         <div class="tab-pane" id="monthly">
+            <div id="monthlyNetworkTrafficGraph" style="height: 300px;"></div>
             <?php printTableStats($vnstat_bin_dir, "monthly", $thisInterface, 'Month') ?>
         </div>
         <div class="tab-pane" id="top10">
