@@ -166,7 +166,7 @@ if (isset($_GET['i'])) {
                     $totalTraffic = bytesToString($hourlyGraph[$i]['total'], true, $hourlyMagnitude);
 
                     if (($hourlyGraph[$i]['label'] == "12am") && ($hourlyGraph[$i]['time'] == "0")) {
-                        continue;
+                        // continue;
                     }
 
                     if ($i == count($hourlyGraph) - 1) {
