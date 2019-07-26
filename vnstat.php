@@ -281,7 +281,7 @@ function getVnstatData($path, $type, $interface)
         case "hourlyGraph":
             return array_slice($hourlyGraph, 0, 24, true);
         case "hourly":
-            return $hourly;
+            return array_slice($hourly, 0, 24, true);
         case "dailyGraph":
             return array_slice($dailyGraph, 0, 30, true);
         case "daily":
