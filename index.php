@@ -282,7 +282,7 @@ if (isset($_GET['i'])) {
     </ul>
 
     <div class="tab-content">
-        <div class="tab-pane active" id="hourlyGraph allen">
+        <div class="tab-pane active" id="hourlyGraph">
             <div id="hourlyNetworkTrafficGraph" style="height: 300px;"></div>
         </div>
 
