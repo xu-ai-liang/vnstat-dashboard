@@ -209,7 +209,7 @@ function getVnstatData($path, $type, $interface)
             } else {
                 $h = $hour['time']['hour'];
             }
-            $tmp_time = mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year'])
+            $tmp_time = mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']);
             $hourly[$i]['label'] = date('m/d H:i', $tmp_time);
             $hourly[$i]['rx'] = bytesToString($hour['rx']);
             $hourly[$i]['tx'] = bytesToString($hour['tx']);
