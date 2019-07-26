@@ -275,9 +275,9 @@ function getVnstatData($path, $type, $interface)
 
     switch ($type) {
         case "fiveGraph":
-            return $fiveGraph;
+            return array_slice($fiveGraph, 0, 10, true);
         case "five":
-            return $five;
+            return array_slice($five, 0, 10, true);;
         case "hourlyGraph":
             return array_slice($hourlyGraph, 0, 24, true);
         case "hourly":
