@@ -284,11 +284,7 @@ if (isset($_GET['i'])) {
     </ul>
 
     <div class="tab-content">
-        <div class="tab-pane active" id="fiveGraph">
-            <div id="fiveNetworkTrafficGraph" style="height: 300px;"></div>
-        </div>
-
-        <div class="tab-pane" id="hourlyGraph">
+        <div class="tab-pane active" id="hourlyGraph allen">
             <div id="hourlyNetworkTrafficGraph" style="height: 300px;"></div>
         </div>
 
