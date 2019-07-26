@@ -210,7 +210,7 @@ function getVnstatData($path, $type, $interface)
                 $h = $hour['time']['hour'];
             }
 
-            $hourly[$i]['label'] = date('m/d G:i', mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']));
+            $hourly[$i]['label'] = date('m/d H:i', mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']));
             $hourly[$i]['rx'] = bytesToString($hour['rx']);
             $hourly[$i]['tx'] = bytesToString($hour['tx']);
             $hourly[$i]['totalraw'] = ($hour['rx'] + $hour['tx']);
@@ -221,7 +221,7 @@ function getVnstatData($path, $type, $interface)
             $hourlyGraph[$i]['rx'] = $hour['rx'];
             $hourlyGraph[$i]['tx'] = $hour['tx'];
             $hourlyGraph[$i]['total'] = ($hour['rx'] + $hour['tx']);
-            $hourlyGraph[$i]['time'] = mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']);
+            $hourlyGraph[$i]['time'] = date('H:i', mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']));
         }
     }
 
