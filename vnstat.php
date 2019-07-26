@@ -145,7 +145,7 @@ function getVnstatData($path, $type, $interface)
         if (is_array($top)) {
             ++$i;
 
-            $top10[$i]['label'] = date('d/m/Y', strtotime($top['date']['month'] . "/" . $top['date']['day'] . "/" . $top['date']['year']));
+            $top10[$i]['label'] = date('Y-m-d', strtotime($top['date']['month'] . "/" . $top['date']['day'] . "/" . $top['date']['year']));
             $top10[$i]['rx'] = bytesToString($top['rx']);
             $top10[$i]['tx'] = bytesToString($top['tx']);
             $top10[$i]['totalraw'] = ($top['rx'] + $top['tx']);
