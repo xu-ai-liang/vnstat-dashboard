@@ -233,14 +233,14 @@ function getVnstatData($path, $type, $interface)
         if (is_array($month)) {
             ++$i;
 
-            $monthly[$i]['label'] = date('F', mktime(0, 0, 0, $month['date']['month'], 10));
+            $monthly[$i]['label'] = date('Y-m', mktime(0, 0, 0, $month['date']['month'], 10));
             $monthly[$i]['rx'] = bytesToString($month['rx']);
             $monthly[$i]['tx'] = bytesToString($month['tx']);
             $monthly[$i]['totalraw'] = ($month['rx'] + $month['tx']);
             $monthly[$i]['total'] = bytesToString($month['rx'] + $month['tx']);
             $monthly[$i]['time'] = mktime(0, 0, 0, $month['date']['month'], 1, $month['date']['year']);
 
-            $monthlyGraph[$i]['label'] = date('F', mktime(0, 0, 0, $month['date']['month'], 10));
+            $monthlyGraph[$i]['label'] = date('Y-m', mktime(0, 0, 0, $month['date']['month'], 10));
             $monthlyGraph[$i]['rx'] = $month['rx'];
             $monthlyGraph[$i]['tx'] = $month['tx'];
             $monthlyGraph[$i]['total'] = ($month['rx'] + $month['tx']);
