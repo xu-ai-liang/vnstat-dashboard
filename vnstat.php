@@ -209,19 +209,20 @@ function getVnstatData($path, $type, $interface)
             } else {
                 $h = $hour['time']['hour'];
             }
-
-            $hourly[$i]['label'] = date('m/d H:i', mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']));
+            $tmp_time = mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year'])
+            $hourly[$i]['label'] = date('m/d H:i', $tmp_time);
             $hourly[$i]['rx'] = bytesToString($hour['rx']);
             $hourly[$i]['tx'] = bytesToString($hour['tx']);
             $hourly[$i]['totalraw'] = ($hour['rx'] + $hour['tx']);
             $hourly[$i]['total'] = bytesToString($hour['rx'] + $hour['tx']);
-            $hourly[$i]['time'] = mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']);
+            $hourly[$i]['time'] = $tmp_time;
 
-            $hourlyGraph[$i]['label'] = date("ga", mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']));
+            $hourlyGraph[$i]['label'] = date("H:i", $tmp_time);
+            $hourlyGraph[$i]['label2'] = date("ga", $tmp_time);
             $hourlyGraph[$i]['rx'] = $hour['rx'];
             $hourlyGraph[$i]['tx'] = $hour['tx'];
             $hourlyGraph[$i]['total'] = ($hour['rx'] + $hour['tx']);
-            $hourlyGraph[$i]['time'] = mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']);
+            $hourlyGraph[$i]['time'] = $tmp_time;
         }
     }
 
