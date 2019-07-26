@@ -274,28 +274,6 @@ if (isset($_GET['i'])) {
     </div>
 </div>
 
-<div id="graphTabNav" class="container">
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#hourlyGraph" data-toggle="tab">Hourly</a></li>
-        <li><a href="#dailyGraph" data-toggle="tab">Daily</a></li>
-        <li><a href="#monthlyGraph" data-toggle="tab">Monthly</a></li>
-    </ul>
-
-    <div class="tab-content">
-        <div class="tab-pane active" id="hourlyGraph">
-            
-        </div>
-
-        <div class="tab-pane" id="dailyGraph">
-            
-        </div>
-
-        <div class="tab-pane" id="monthlyGraph">
-            
-        </div>
-    </div>
-</div>
-
 <div id="tabNav" class="container">
     <ul class="nav nav-tabs">
         <li class="active"><a href="#hourly" data-toggle="tab">Hourly</a></li>
