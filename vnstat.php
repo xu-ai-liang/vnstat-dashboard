@@ -184,14 +184,14 @@ function getVnstatData($path, $type, $interface)
         if (is_array($day)) {
             ++$i;
 
-            $daily[$i]['label'] = date('d/m/Y', mktime(0, 0, 0, $day['date']['month'], $day['date']['day'], $day['date']['year']));
+            $daily[$i]['label'] = date('Y-m-d', mktime(0, 0, 0, $day['date']['month'], $day['date']['day'], $day['date']['year']));
             $daily[$i]['rx'] = bytesToString($day['rx']);
             $daily[$i]['tx'] = bytesToString($day['tx']);
             $daily[$i]['totalraw'] = ($day['rx'] + $day['tx']);
             $daily[$i]['total'] = bytesToString($day['rx'] + $day['tx']);
             $daily[$i]['time'] = mktime(0, 0, 0, $day['date']['month'], $day['date']['day'], $day['date']['year']);
 
-            $dailyGraph[$i]['label'] = date('jS', mktime(0, 0, 0, $day['date']['month'], $day['date']['day'], $day['date']['year']));
+            $dailyGraph[$i]['label'] = date('m-d', mktime(0, 0, 0, $day['date']['month'], $day['date']['day'], $day['date']['year']));
             $dailyGraph[$i]['rx'] = $day['rx'];
             $dailyGraph[$i]['tx'] = $day['tx'];
             $dailyGraph[$i]['total'] = ($day['rx'] + $day['tx']);
