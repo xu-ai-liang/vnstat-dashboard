@@ -304,19 +304,14 @@ if (isset($_GET['i'])) {
 
 <div id="tabNav" class="container">
     <ul class="nav nav-tabs">
-        <li class="active">
-            <a href="#five" data-toggle="tab">5Min</a></li>
-        <li><a href="#hourly" data-toggle="tab">Hourly</a></li>
+        <li class="active"><a href="#hourly" data-toggle="tab">Hourly</a></li>
         <li><a href="#daily" data-toggle="tab">Daily</a></li>
         <li><a href="#monthly" data-toggle="tab">Monthly</a></li>
         <li><a href="#top10" data-toggle="tab">Top 10</a></li>
     </ul>
 
     <div class="tab-content">
-        <div class="tab-pane active" id="five">
-            <?php printTableStats($vnstat_bin_dir, "five", $thisInterface, 'Time') ?>
-        </div>
-        <div class="tab-pane" id="hourly">
+        <div class="tab-pane active" id="hourly">
             <?php printTableStats($vnstat_bin_dir, "hourly", $thisInterface, 'Hour') ?>
         </div>
         <div class="tab-pane" id="daily">
