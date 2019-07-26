@@ -217,11 +217,11 @@ function getVnstatData($path, $type, $interface)
             $hourly[$i]['total'] = bytesToString($hour['rx'] + $hour['tx']);
             $hourly[$i]['time'] = mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']);
 
-            $hourlyGraph[$i]['label'] = date("H:i", mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']));
+            $hourlyGraph[$i]['label'] = date("ga", mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']));
             $hourlyGraph[$i]['rx'] = $hour['rx'];
             $hourlyGraph[$i]['tx'] = $hour['tx'];
             $hourlyGraph[$i]['total'] = ($hour['rx'] + $hour['tx']);
-            $hourlyGraph[$i]['time'] = date('H:i', mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']));
+            $hourlyGraph[$i]['time'] = mktime($h, 0, 0, $hour['date']['month'], $hour['date']['day'], $hour['date']['year']);
         }
     }
 
